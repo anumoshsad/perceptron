@@ -1,0 +1,40 @@
+Name: Shouman Das
+Email: shouman.das@rochester.edu
+Course: CSC446
+Homework: HW2
+Implement perceptron for the adult income dataset using Python. Data available in /u/cs246/data/adult. Experiment with performance as a function of number of iterations.
+
+************ Files *********
+
+das_perceptron.py
+README
+das_perceptron.png
+
+************ Algorithm *****
+
+We implement perceptron algorithm on the adult income dataset.
+repeat
+	for n = 1...N do
+		if t_n != y_n then
+		w = w + y_n * x_n
+		end if
+	end for
+until for all n t_n = y_n or maxiters
+
+************ Instructions ***
+
+The main algorithm is on das_perceptron.py which is executable with --nodev and --iterations argument. 
+This script also experiments with different number of iterations. If --nodev and --iterations is not given we run the loop for 100 times and plot the training accuracy and dev accuracy. 
+
+************ Results *******
+
+Comparing our results to the previous homework, we see that perceptron gives us around 80% accuracy on the test data. we choose our final iteration number as 10. And report our training testing error for that.
+
+************ Your interpretation **** (Attention: important!)
+
+From this implementation we see that iterations and learning rate is highly important for SVM algorithm. 
+
+************ References ************
+1. Lecture Notes(https://www.cs.rochester.edu/~gildea/2018_Spring/notes.pdf)
+2.  Book: Bishop, Christopher, Pattern Recognition and Machine Learning
+
